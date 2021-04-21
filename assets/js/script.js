@@ -9,7 +9,8 @@ $(document).ready(function() {
     var close_btn =$(".close-btn");
     var window_obj=$(window);
     window_obj.on("click",function(e) {
-    var target_classes = $(e.target).attr('class').split(/\s+/);
+    var target = $(e.target);   
+    var target_classes = target.attr('class').split(/\s+/);
         $.each(target_classes, function(index, item) {
         if (item == 'wrapper') {
             closeModal();
